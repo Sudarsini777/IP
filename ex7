@@ -1,0 +1,105 @@
+HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking</title>
+</head>
+<body>
+<h2>Session Tracking using Java Servlet</h2>
+<form action="session" method="post">
+    Name:
+    <input type="text" name="name" required>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+SERVLET:
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashSet;
+import java.util.Set;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+@WebServlet("/session")
+public class SessionServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+    private static Set<String> visitors = new HashSet<String>();
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+       response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        String name = request.getParameter("name");
+        if (name == null || name.trim().equals("")) {
+            name = "Guest";
+        }
+       Cookie cookie = new Cookie("user", name);
+        cookie.setMaxAge(60 * 60);
+        response.addCookie(cookie);
+        String sessionId = request.getSession().getId();
+        visitors.add(sessionId);
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Session Tracking</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h2>Session Tracking using Servlet</h2>");
+        out.println("<h3>Welcome, " + name + "</h3>");
+        out.println("<p>Cookie created successfully.</p>");
+        out.println("<p>Session ID: " + sessionId + "</p>");
+        out.println("<p><b>Number of Unique Visitors: "
+                + visitors.size() + "</b></p>");
+        out.println("<h3>Hidden Form Field</h3>");
+        out.println("<form action='session' method='post'>");
+        out.println("<input type='hidden' "
+                + "name='name' value='" + name + "'>");
+        out.println("<input type='submit' value='Continue'>");
+        out.println("</form>");
+        out.println("<h3>URL Rewriting</h3>");
+        String url = "session?name=" + name;
+        out.println("<a href='" + url + "'>");
+        out.println("Continue using URL Rewriting");
+        out.println("</a>");
+        out.println("<br><br>");
+        out.println("<a href='index.html'>Back to Home</a>");
+        out.println("</body>");
+        out.println("</html>");}
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        String name = request.getParameter("name");
+        if (name == null || name.trim().equals("")) {
+            name = "Guest";
+        }
+        String sessionId = request.getSession().getId();
+        visitors.add(sessionId);
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>URL Rewriting</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h2>URL Rewriting Session Tracking</h2>");
+        out.println("<h3>Welcome, " + name + "</h3>");
+        out.println("<p>Session ID: " + sessionId + "</p>");
+        out.println("<p><b>Number of Unique Visitors: "
+                + visitors.size() + "</b></p>");
+        out.println("<p>User information was passed through "
+                + "the URL.</p>");
+        out.println("<a href='index.html'>Back to Home</a>");
+
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+ 
+ 
