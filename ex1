@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+<style>
+body
+{
+ background-color: #f4f4f4;
+}
+</style>
+<body>
+<nav>
+<ul>
+<aside>
+<a href="">HOME</a>
+<a href="">SHOP ITEM</a>
+<a href="">CART</a>
+<a href="">OFF DETAILS</a>
+<a href="">SHIPPING</a>
+</aside>
+</ul>
+</nav>
+</header>
+</style>
+<body>
+<h1>WELCOME TO BEAUTY SHOP</h1>
+<img src="https://img.magnific.com/free-photo/beauty-cosmetics-products-accessories_23-2148598578.jpg?semt=ais_hybrid&w=740&q=80" height="100%" width="100%">
+
+<p>An e-commerce website is a digital storefront that allows businesses to display and sell products or services over the internet. These platforms provide a seamless shopping experience by offering virtual product catalogs, integrated shopping carts, and secure online payment gateways for credit cards or digital wallets. Advanced backend systems handle real-time inventory tracking, customer account management, and automated shipping updates. By removing geographical barriers, a well-optimized shop website enables businesses to reach a global audience, operates continuously without traditional retail store hours, and utilizes customer data to deliver personalized product recommendations.</p>
+
+<main>
+<section>
+</section>
+</main>
+<a href="shop2.html">
+<input type="submit" value="GO TO PRODUCTS"></a>
+
+</body>
+
+</html>
+   Stop2
+<!DOCTYPE HTML>
+<html>
+  <head>
+     
+
+  </head>
+<style>
+ body{
+ background-color: #f4f4f4;
+}
+</style>
+  <body>
+<table border="0">
+  <tr>
+   <th>FACE CARE</th>
+   <th>NAIL</th>
+   <th>HAIR CARE</th>
+   <th>EYE CARE</th>
+   <th>EARRINGS</th>
+
+  </tr>
+  <tr>
+   <td><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQvt_XuSmvi7X0t7PmAwaKTqFm2NAkyqncNSXkV3a9XWZ8gULpAxIJUAs4IlOSLTPriOnN8zNza7copIsbxOzfZTVx4-vfK-8twtgheQC0ytDycES_ULyryAQ" height="300" width="300"></td>
+   <td><img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT20HZfVa8FTRB_ghnPh5-b1aW3474geuLI5YMNOOjdAfGMwxjNr9lgaSaVWFabpah-QLgtugrxTqLeeGLqemXiv0lNxOfNkCEntQex-eaL" height="300" width="300"></td>
+   <td><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRWQ5ktkTLj2d4FMOYQYvW4iw0DmMR0Y34c60NNCJMgnjPAjJfD5H7qGlTzWllcBKm7txRy2NqDyUficTLxC_DDH-FsRA2RXXsU4jYGmZtGcph4wK8fGqY7MA" height="300" width="300"></td>
+   <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAmGUIjWyYMhMfQ5u1yscF9wA2FJ6a3Lu7VcPYHs2hrw&s=10" height="300" width="300"></td>
+   <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH2qC9Zv8B8xO4OMnF2FWGFX52UhJun8jCedLLRKjxb-qcovzWezrL7XbI&s=10" height="300" width="300"></td>
+ </tr>
+  <tr>
+   <td>$100</td>
+   <td>$299</td>
+   <td>$490</td>
+   <td>$1090</td>
+   <td>$77</td>
+   
+  </tr>
+ <tr>
+   <td>off 50% for prime</td>
+   <td>off 50% for prime</td>
+   <td>off 50% for prime</td>
+   <td>off 50% for prime</td>
+   <td>off 50% for prime</td>
+  </tr>
+  <tr>
+   <td></td>
+   <td>$299</td>
+   <td>$490</td>
+   <td>$1090</td>
+   <td>$77</td>
+   
+  </tr>
+
+  </body>
+</html>
